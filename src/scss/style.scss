@@ -1,5 +1,6 @@
 $primary-color: #008ed6;
 $dark-overlay: rgba(0,0,0, 0.7);
+$icon-size: 30px;
 
 .navbar{
   border-bottom: 3px solid $primary-color ;
@@ -17,22 +18,29 @@ $dark-overlay: rgba(0,0,0, 0.7);
     border-top: 4px solid $primary-color;
   }
 
-  #home-heading{
-  position:relative;
-  height: 100%;
-  background: url('../img/background.jpeg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #fff;
-}
+  #showcase{
+    position: relative;
+    background: url('../img/background.jpeg');
+    min-height: 600px;
 
-.dark-overlay{
-  // position: absolute;
-  background-color: $dark-overlay;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    .primary-overlay {
+      background: $dark-overlay;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .fa{
+    font-size: $icon-size;
+  }
+
+@media(max-width: 768px)
+{
+  #showcase{
+    min-height: 1150px;
+  }
+
 }
